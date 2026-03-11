@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Botswana Safari Booking</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://www.botswana-experience.com/wp-content/uploads/2022/04/botswana-experience-safaris-.jpg");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+.navbar{
+    background:#3b2f1c;
+}
+
+.navbar-brand{
+    font-weight:bold;
+}
+
+.form-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:90vh;
+}
+
+.form-card{
+    background:rgba(255,255,255,0.95);
+    padding:35px;
+    border-radius:15px;
+    width:420px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    animation:fadeIn 0.8s ease;
+}
+
+.form-card h2{
+    text-align:center;
+    color:#5c3d1e;
+    margin-bottom:15px;
+}
+
+.form-card p{
+    text-align:center;
+    color:#777;
+}
+
+.form-control:focus{
+    border-color:#8b5a2b;
+    box-shadow:0 0 6px rgba(139,90,43,0.4);
+}
+
+.btn-safari{
+    background:linear-gradient(135deg,#8b5a2b,#c19a6b);
+    border:none;
+    color:white;
+    font-weight:bold;
+}
+
+.btn-safari:hover{
+    background:linear-gradient(135deg,#6e4623,#a67c52);
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:10px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="fa-solid fa-paw"></i> Botswana Safari
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Destinations</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+
+<!-- Form Section -->
+<div class="form-section">
+
+<div class="form-card">
+
+<h2><i class="fa-solid fa-binoculars"></i> Safari Booking</h2>
+<p>Plan your Botswana adventure</p>
+
+<form id="bookingForm">
+
+<div class="mb-3">
+<label class="form-label">Full Name</label>
+<input type="text" class="form-control" placeholder="Enter your full name" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email Address</label>
+<input type="email" class="form-control" placeholder="Enter your email" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Phone Number</label>
+<input type="tel" class="form-control" placeholder="Enter your phone number">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Safari Destination</label>
+<select class="form-control">
+<option>Select destination</option>
+<option>Okavango Delta</option>
+<option>Chobe National Park</option>
+<option>Moremi Game Reserve</option>
+<option>Kalahari Desert</option>
+</select>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Travel Date</label>
+<input type="date" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Message</label>
+<textarea class="form-control" rows="3" placeholder="Tell us your safari preferences"></textarea>
+</div>
+
+<button class="btn btn-safari w-100">
+<i class="fa-solid fa-paper-plane"></i> Book Safari
+</button>
+
+</form>
+
+<div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+✅ Your safari request has been submitted!
+</div>
+
+</div>
+</div>
+
+
+<footer>
+© 2026 Botswana Safari Experience
+</footer>
+
+
+<!-- JavaScript -->
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+document.getElementById("successMessage").style.display = "block";
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
